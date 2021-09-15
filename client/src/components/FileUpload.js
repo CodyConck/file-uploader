@@ -33,11 +33,11 @@ export const FileUpload = () => {
             setMessage('File Uploaded');
 
         } catch(err) {
-            if(err.response.status === 500) {
-                setMessage('theres a problem with the server');
-            } else {
-                setMessage(err.response.data.msg);
-            }
+            // if(err.response.status === 500) {
+            //     setMessage('theres a problem with the server');
+            // } else {
+            //     setMessage(err.response.data.msg);
+            // }
         }
     }
 
@@ -62,7 +62,7 @@ export const FileUpload = () => {
             { uploadedFile ? <div className='row mt-5'>
                 <div className='col-md-6 m-auto'>
                     <h3 className='text-center'>{ uploadedFile.fileName }</h3>
-                    <img style= {{width: '100%' }}src={uploadedFile.filePath} alt=''/>
+                    <img style= {{ width: '100%' }} src={uploadedFile.filePath} alt=''/>
                 </div>
             </div> : null }
         </Fragment>
